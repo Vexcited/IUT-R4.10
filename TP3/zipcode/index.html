@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZipCode</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="min-h-screen p-3 bg-gray-100 flex items-center justify-center">
+      <div class="container max-w-screen-md mx-auto">
+        <div>
+          <h2 class="font-semibold text-xl text-gray-600 mb-6">
+            Recherche de ville
+          </h2>
+
+          <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+            <div>
+              <div
+                class="grid gap-2 gap-y-2 text-sm grid-cols-1 md:grid-cols-5 mb-5"
+              >
+                <div class="md:col-span-1">
+                  <label for="zipcode">Code postal</label>
+                  <input
+                    type="text"
+                    name="zipcode"
+                    id="zipcode"
+                    class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                    placeholder=""
+                    value=""
+                  />
+                </div>
+              </div>
+
+              <div
+                class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-2"
+              >
+                <div class="md:col-span-1">
+                  <label for="city">Ville</label>
+                  <select
+                    name="city"
+                    id="city"
+                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                    aria-details="Rentrez un code postal d'abord"
+                  ></select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

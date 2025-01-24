@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regions</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="min-h-screen p-3 bg-gray-100 flex items-center justify-center">
+      <div class="container max-w-screen-xl mx-auto">
+        <div>
+          <h1 class="font-bold text-xl text-gray-600 mb-6">
+            Découpage administratif des régions
+          </h1>
+          <div class="grid gap-2 md:grid-cols-3 mb-6">
+            <div class="bg-white rounded shadow-lg p-4 px-4">
+              <div class="grid gap-2 md:grid-cols-2 border-b-2 border-orange-600 font-semi-bold text-xl text-orange-600 mb-6">
+                <h2>Régions</h2>
+                 <span class="counter text-end">99</span> 
+              </div>
+              
+              <div>
+                <ul id="regions" class="max-w-md divide-y divide-gray-200 dark:divide-gray-700 text-gray-600">
+                  <li class="py-2">01 : Région N°1</li>
+                  <li class="py-2">02 : Région N°2</li>
+                  <li class="py-2">03 : Région N°3</li>
+                  <li class="py-2">04 : Région N°4</li>
+                  <li class="py-2">05 : Région N°5</li>
+                  <li class="py-2">06 : Région N°6</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-white rounded shadow-lg p-4 px-4">
+                           <div class="grid gap-2 md:grid-cols-2 border-b-2 border-pink-600 font-semi-bold text-xl text-pink-600 mb-6">
+                  <h2>Départements</h2>
+                   <span class="counter text-end">99</span> 
+                </div>
+
+                <div>
+                  <ul id="departements" class="max-w-md divide-y divide-gray-200 dark:divide-gray-700 text-gray-600">
+                    <li class="py-2">01 : Département N°1</li>
+                    <li class="py-2">02 : Département N°2</li>
+                    <li class="py-2">03 : Département N°3</li>
+                    <li class="py-2">04 : Département N°4</li>
+                    <li class="py-2">05 : Département N°5</li>
+                  </ul>
+                </div>
+              </h2>
+            </div>
+            <div class="bg-white rounded shadow-lg p-4 px-4">
+              <div class="grid gap-2 md:grid-cols-2 border-b-2 border-sky-600 font-semi-bold text-xl text-sky-600 mb-6">
+                <h2>Villes</h2>
+                 <span class="counter text-end">99</span> 
+              </div>
+              <div>
+                <ul id="villes" class="max-w-md divide-y divide-gray-200 dark:divide-gray-700 text-gray-600">
+                  <li class="py-2">Nom de la ville N°1</li>
+                  <li class="py-2 ">Nom de la ville N°2</li>
+                  <li class="py-2 ">Nom de la ville N°3</li>
+                  <li class="py-2 ">Nom de la ville N°4</li>
+                  <li class="py-2 ">Nom de la ville N°5</li>
+                </ul>
+              </div>
+              <div id="cityDetails" class="bg-white rounded shadow-lg p-4 px-4 absolute text-sky-500 hidden"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./script.js" defer></script>
+  </body>
+</html>
