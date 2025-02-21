@@ -1,0 +1,164 @@
+@import "tailwindcss";
+@theme {
+	--color-primary: #e7272d;
+	--color-secondary: #fbb217;
+	--font-slackey: Slackey, serif;
+	--font-rubik: "Rubik Dirt", serif;
+}
+
+@layer base {
+	#root {
+		@apply flex justify-center items-center w-full;
+
+	}
+	.menu-link {
+		@apply text-xl  uppercase text-white font-bold font-slackey transition duration-300 ease-in-out hover:text-secondary;
+	}
+
+	/**** GENERAL ***/
+	h1,
+	h2,
+	h3 {
+		@apply font-bold font-slackey;
+	}
+	h1 {
+		@apply text-5xl md:text-7xl;
+	}
+	h2 {
+		@apply text-2xl md:text-5xl text-primary md:my-5 py-4;
+	}
+
+	h3 {
+		@apply text-primary text-2xl;
+	}
+
+
+	body {
+		@apply text-neutral-500;
+	}
+
+	.price {
+		@apply font-rubik;
+	}
+
+	/**** Entete ***/
+	.header {
+		@apply  flex flex-col p-5;
+		.top {
+			@apply flex flex-col md:flex-row md:justify-between md:items-center mx-auto md:w-9/10;
+			nav {
+				@apply flex flex-col md:flex-row md:space-x-5 items-center;
+			}
+		}
+	}
+
+	/**** Produits en vedette ***/
+	.featured {
+		@apply flex flex-col items-center md:flex-row py-10 md:mx-auto bg-[url('src/assets/images/background-slate.jpg')] bg-cover bg-center md:justify-around;
+		.content {
+			@apply order-2 md:order-1 text-center space-y-2 md:space-y-10;
+			.price {
+				@apply text-secondary text-5xl md:text-7xl;
+			}
+		}
+
+		.picture {
+			@apply order-1 md:order-2;
+		}
+	}
+
+	/**** Suggestions ***/
+	.suggests {
+		@apply mx-auto text-center flex-col p-5;
+
+    .content {
+			@apply container grid md:grid-cols-3 md:gap-x-10 gap-y-4 mx-auto;
+
+      & > div {
+				@apply pb-5 border-b-2 border-solid md:border-0 text-center flex flex-col;
+				img {
+					@apply mx-auto;
+				}
+				p {
+					@apply text-justify h-auto;
+				}
+				.price {
+					@apply block text-primary font-bold text-3xl mt-auto pt-4;
+				}
+
+				h3 {
+					@apply bg-primary rounded-xl text-white text-3xl inline-block p-2 mb-5;
+				}
+			}
+		}
+	}
+
+	/**** Kazaletter ***/
+	.newsletter {
+		@apply flex flex-col mx-auto text-center p-5 bg-secondary;
+		.content {
+			@apply flex flex-col;
+		}
+	}
+
+	/**** Temoignages ***/
+	.testimony {
+		@apply flex flex-col text-center p-5 h-full;
+
+		.content {
+			@apply mx-auto gap-10 p-5 flex flex-col md:flex-row container text-center;
+
+			div > div {
+				@apply  text-justify my-5;
+			}
+		}
+
+		img {
+			@apply rounded-full border-4 border-primary  w-1/2 mx-auto;
+		}
+	}
+
+	/**** Pied de page ***/
+	.footer {
+		@apply flex flex-col   text-center bg-neutral-800;
+
+		.content {
+			@apply flex flex-col  md:flex-row gap-4 pb-5 md:p-5 border-solid  md:justify-around md:items-center;
+		}
+		.copy {
+			@apply border-t  border-white/50;
+		}
+		i {
+			@apply text-4xl m-2;
+		}
+		img {
+			@apply w-[200px] mx-auto md:m-0;
+		}
+
+		.links {
+			@apply flex flex-col;
+		}
+	}
+}
+@layer components {
+	a {
+		@apply text-secondary hover:text-primary;
+	}
+	.btn-lg,
+	.btn-md {
+		@apply bg-primary rounded md:rounded-xl transition duration-300 ease-in-out hover:bg-secondary hover:text-primary;
+	}
+	.btn-lg {
+		@apply p-2 md:p-3 text-white md:text-2xl;
+	}
+	.btn-md {
+		@apply m-2  py-2 px-4 text-white text-lg md:text-xl rounded-md md:rounded-lg;
+	}
+
+	form {
+		@apply flex flex-col md:flex-row md:gap-5 md:mx-auto;
+	}
+	input {
+		@apply bg-white rounded-md p-2 m-2;
+	}
+}
