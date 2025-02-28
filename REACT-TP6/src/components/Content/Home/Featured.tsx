@@ -36,7 +36,7 @@ const Featured: React.FC = () => {
 
   const updateSlide = useCallback((index: number) => {
     if (!data || !section.current) return;
-    section.current.style.backgroundImage = `linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url(${data[index].product.pictures[0]})`;
+    section.current.style.backgroundImage = `linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url(${data[index].product.pictures[0]})`;
   }, [data]);
 
   useEffect(() => {
