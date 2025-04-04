@@ -1,0 +1,37 @@
+{
+  "name": "kazaburger",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tailwindcss -i ./src/index.css -o ./public/css/styles.css && tsx ./src/index.ts",
+    "dev": "concurrently \"tsx --watch ./src/index.ts\" \"tailwindcss -i ./src/index.css -o ./public/css/styles.css --watch\""
+  },
+  "author": "Mikkel ALMONTE--RINGAUD <contact@vexcited.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@10.5.2",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^5.0.0",
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1",
+    "morgan": "^1.10.0",
+    "tailwindcss": "^4.1.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "bcrypt"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #e7272d;
+  --color-secondary: #fbb217;
+  --font-slackey: Slackey, serif;
+  --font-rubik: "Rubik Dirt", serif;
+}
